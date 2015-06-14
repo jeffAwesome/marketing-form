@@ -1,9 +1,23 @@
 // tests.js
-describe('Array', function(){
-  describe('#indexOf()', function(){
-    it('should return -1 when the value is not present', function(){
-      chai.assert.equal(-1, [1,2,3].indexOf(5));
-      chai.assert.equal(-1, [1,2,3].indexOf(0));
+describe('MarketingForm', function(){
+  describe('#new', function(){
+    it('create a global object storing all the form information', function(){
+       var marketingForm = new MarketingForm();
+       var globalMarket = window.globalForms;
+       chai.expect(globalMarket).to.exist;
+    });
+
+    it('should create a new property in the global object as the form name', function(){
+       var marketingForm = new MarketingForm();
+       var globalMarket = window.globalForms;
+       chai.expect(globalMarket).to.exist;
+    });
+  });
+
+  describe('#extend', function(){
+    it('extends configuration options passed in', function(){
+       var marketingForm = new MarketingForm({testMode: true});
+       chai.assert.typeOf(marketingForm.prototype.extend, 'Object');
     });
   });
 });

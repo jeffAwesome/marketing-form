@@ -1,1 +1,1 @@
-console.log("fixed");
+var MarketingForm=function(){window.globalForms={}};
