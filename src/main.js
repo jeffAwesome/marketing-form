@@ -12,14 +12,18 @@ var MarketingForm = (function() {
 
 
   // Private API //
-  Form.prototype.extend = function(obj) {
-    for (var i in obj) {
-      if (obj.hasOwnProperty(i)) {
-        this[i] = obj[i];
+
+
+  Form.prototype.extend = function(target, object) {
+    for (var prop in object) {
+      if (object.hasOwnProperty(prop)) {
+        target[prop] = object[prop];
       }
     }
+    return target;
   };
 
+  
 
 
 
