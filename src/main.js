@@ -5,8 +5,8 @@ var MarketingForm = (function() {
 
   // PUBLIC API 
   var Form = function(options) {
-  
-  }
+
+  };
 
 
 

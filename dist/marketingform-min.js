@@ -1,1 +1,1 @@
-var MarketingForm=function(){window.globalForms={}};
+var MarketingForm=function(){window.globalForms={};var a=function(a){};return a.prototype.extend=function(a){for(var b in a)a.hasOwnProperty(b)&&(this[b]=a[b])},a}();

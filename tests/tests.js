@@ -17,7 +17,7 @@ describe('MarketingForm', function(){
   describe('#extend', function(){
     it('extends configuration options passed in', function(){
        var marketingForm = new MarketingForm({testMode: true});
-       chai.assert.typeOf(marketingForm.prototype.extend, 'Object');
+       chai.expect(marketingForm.extend).to.be.a('function');
     });
   });
 });
